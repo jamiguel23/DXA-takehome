@@ -19,3 +19,7 @@ Began the day to clean up to try a different API since my original only allowed 
 Finished documenting (can be found in process.md) as well as uploaded a video of the bot working.
 
 Compiling all the necessary documents to send off back to the team.
+
+Will look into some adding more features down the road.
+
+Overall, I really enjoyed this process. I learned a lot and had a lot of fun along the way. I even enjoyed the hard parts and the parts that I didn't even know but eventually learned how to do. Looking forward to whats ahead.
