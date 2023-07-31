@@ -4,8 +4,9 @@
 const {Client , IntentsBitField, Collection, Events} = require('discord.js');
 const fs = require('node:fs');
 const path = require('node:path')
-require('dotenv').config()
-const token = process.env.TOKEN;
+// require('dotenv').config()
+const token = process.env['TOKEN'];
+console.log(token)
 
 // Initialize client with specific permissions
 const client = new Client({
