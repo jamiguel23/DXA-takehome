@@ -36,8 +36,8 @@
     * Initialize package manager like npm or yarn
     * Install dependencies like discord.js, axios, and dotenv
     ![dependcies](./img/process/dependacies.png)
-    * Create index.js file and make it entry point
-    * Create .env file to require and config in index.js and then add bot token, guildID, clientID, and weatherAPI key to the .env file. Sample env in root
+    * Create index.js file and make it the entry point
+    * Create .env file to require and config in index.js. Then add bot token, guildID, clientID, and weatherAPI key to the .env file. Sample env in root
     * In the index.js file initialize client with proper intents, login using TOKEN, and add ready event listener.
     ![Client startup](./img/process/clientStartup.png)
 
@@ -45,9 +45,9 @@
 
     * Create a new folder called commands that will hold all the slash commands. NOTE: This step will help with scalability
     * In the new command folder, add another new folder named the command you want to create
-    * Inside that subfolder crete a .js file with the name of your command that exports data and the execute function
+    * Inside that subfolder create a .js file with the name of your command that exports data and the execute function (see discord.js documentation)
     ![getforcast incomplete code snippet](./img/process/getForcast.png)
-    * At the root of the file create a new file called deploy-command.js to deploy the functionality of the command
+    * At the root of the file create a new file called deploy-command.js to deploy the functionality of the commands
     * The following code was adapted from discordjs.guide and will use the fs and path modules from node.js to find the path of the commands, clean the data, store the list of commands, and use a put method deploy the commands
     ![deploy commands](./img/process/deploy-command.png)
     * Run the delopy-commands file with the following in the terminal
@@ -82,5 +82,3 @@
 3. Display to client
 
 ![display result](./img/process/displaytoclient.png)
-
-

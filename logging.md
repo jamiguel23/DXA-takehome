@@ -10,11 +10,11 @@ When I received the user story, I immediately created an ERD on how the data sho
 
 Once I made the slash command with the option to get the the zip code and successfully hit the weather API I reached my MVP. Though, while testing I hit my maximum calls on the API I am using so I might need to find another that can give me some more free call a day.
 
-Calling it a night after update the README and pushing to GitHub. The goal for tomorrow is to clean up, modularize, start the documentation, and them deploy to a hosting service like render.com or heroku if there is more time I will look to add a gif and a temp converter.
+Calling it a night after update the README and pushing to GitHub. The goal for tomorrow is to clean up, modularize, start the documentation, and then deploy to a hosting service like render.com or heroku. If there is more time I will look to add a gif and a temp converter.
 
 ## July 31, 2023 (Morning)
 
-Began the day to clean up to try a different API since my original only allowed 50 calls a day which was not sufficient for me testing. Migrated to WeatherAPI and its much better. After that, i started to make myself comments to remember what the lines of code were doing. When that was complete I push to main and will attempt to host using a service but might also look into repl.it if I run into problems.
+Began the day to clean up to try a different API since my original only allowed 50 calls a day which was not sufficient for me testing. Migrated to WeatherAPI and its much better. After that, I started to make comments to remember what the lines of code were doing. When that was complete I push to main and will attempt to host using a service but might also look into repl.it if I run into problems.
 
 Finished documenting (can be found in process.md) as well as uploaded a video of the bot working.
 
