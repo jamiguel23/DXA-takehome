@@ -8,5 +8,3 @@ I started this project by reading the user story carefully. I need to create a b
 Once I made the slash command with the option to get the the zip code and successfully hit the weather API I reached my MVP. Though, while testing I hit my maximum calls on the API I am using so I might need to find another that can give me some more free call a day.
 
 Calling it a night after update the README and pushing to GitHub. The goal for tomorrow is to clean up, modularize, start the documentation, and them deploy to a hosting service like render.com or heroku if there is more time I will look to add a gif and a temp converter.
-
-Time Spent: 2h:30m
