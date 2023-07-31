@@ -1,6 +1,6 @@
 'use strict'
 
-// deconstruct Client and intents permissions
+// deconstruct Client and intents permissions as well as all other dependencies
 const {Client , IntentsBitField, Collection, Events} = require('discord.js');
 const fs = require('node:fs');
 const path = require('node:path')
@@ -16,12 +16,11 @@ const client = new Client({
   ]
 });
 
+// Setting the client commands to a new Collection similar to an Array
 client.commands = new Collection();
 
-const commandsPath = path.join(__dirname, 'commands');
 const foldersPath = path.join(__dirname, 'commands');
 const commandFolders = fs.readdirSync(foldersPath);
-//const commandFiles = fs.readdirSync(commandsPath).filter(file => file.endsWith('.js'));
 
 for (const folder of commandFolders) {
 	const commandsPath = path.join(foldersPath, folder);
@@ -37,10 +36,6 @@ for (const folder of commandFolders) {
 		}
 	}
 }
-
-// client.on('messageCreate', (message) => {
-//   console.log(message)
-// });
 
 client.on(Events.InteractionCreate, async (interaction) => {
   if (!interaction.isChatInputCommand()) return;
