@@ -25,7 +25,7 @@ const getForcast = async () => {
 		
 	}
 }
-getForcast();
+// getForcast();
 
 // console.log(state)
  
@@ -33,7 +33,12 @@ getForcast();
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('forecast')
-		.setDescription('gets forecast data'),
+		.setDescription('gets forecast data')
+		.addStringOption(option =>
+			option.setName('zip_code')
+			.setDescription('Enter zip code')
+			.setRequired(true)
+		),
 	async execute(interaction) {
 		console.log(state)
 		await interaction.reply(`This is the temp ${state.temp}`);
