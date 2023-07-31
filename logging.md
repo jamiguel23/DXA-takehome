@@ -11,3 +11,5 @@ Calling it a night after update the README and pushing to GitHub. The goal for t
 ## July 31, 2023
 
 Began the day to clean up to try a different API since my original only allowed 50 calls a day which was not sufficient for me testing. Migrated to WeatherAPI and its much better. After that, i started to make myself comments to remember what the lines of code were doing. When that was complete I push to main and will attempt to host using a service but might also look into repl.it if I run into problems.
+
+Finished documenting and currently uploading unlisted youtube video
