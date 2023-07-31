@@ -18,7 +18,10 @@ Run server:
   npm start 
 ```
 
-## Data ERD:
+## Data ERD
+
 ![ERD](./img/dataFlow.png)
+
 ## Usage
+
 Project is not currently deployed.

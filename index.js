@@ -1,6 +1,6 @@
 'use strict'
 
-// deconstruct Client and intents permissions
+// deconstruct Client and intents permissions as well as all other dependencies
 const {Client , IntentsBitField, Collection, Events} = require('discord.js');
 const fs = require('node:fs');
 const path = require('node:path')
@@ -16,15 +16,18 @@ const client = new Client({
   ]
 });
 
+// Setting the client commands to a new Collection similar to an Array
 client.commands = new Collection();
 
-const commandsPath = path.join(__dirname, 'commands');
+// Creates file path the represent the location of the 'commands' folder
 const foldersPath = path.join(__dirname, 'commands');
+// Sync method reads and returns an array of the contents of that path
 const commandFolders = fs.readdirSync(foldersPath);
-//const commandFiles = fs.readdirSync(commandsPath).filter(file => file.endsWith('.js'));
 
+// Repeat the process with the individual command folders
 for (const folder of commandFolders) {
 	const commandsPath = path.join(foldersPath, folder);
+  // Filtering only .js files
 	const commandFiles = fs.readdirSync(commandsPath).filter(file => file.endsWith('.js'));
 	for (const file of commandFiles) {
 		const filePath = path.join(commandsPath, file);
@@ -38,20 +41,20 @@ for (const folder of commandFolders) {
 	}
 }
 
-// client.on('messageCreate', (message) => {
-//   console.log(message)
-// });
-
+// Create an event listener
 client.on(Events.InteractionCreate, async (interaction) => {
+  // Checking if interaction is a input command
   if (!interaction.isChatInputCommand()) return;
 	const command = interaction.client.commands.get(interaction.commandName);
 
+  // to catch registered but not functioning commands
 	if (!command) {
 		console.error(`No command matching ${interaction.commandName} was found.`);
 		return;
 	}
 
 	try {
+    // Execute the interaction
 		await command.execute(interaction);
 	} catch (error) {
 		console.error(error);
