@@ -66,4 +66,21 @@
     * Start up your server using nodemon or the terminal command node index.js. The slash command will be visible to the Discord Server
     ![slash command](./img/process/slashcommand.png)
 
-3. Weather Request
+## Weather Request
+
+1. Working in the getForcast command file, require axios to make HTTP requests
+
+2. Handle async request inside the execution method while handling options
+
+    * Create try catch block that will handle errors
+    * Create a variable using the interaction object to get the value of the users input option
+    * Using the WeatherAPI endpoint with the option input with API key for an axios get request and set that response to a variable
+    * Using a template literal use the response object to customize a message
+    * Send that message to te client using the reply method
+    ![axios get request](./img/process/axios.png)
+
+3. Display to client
+
+![display result](./img/process/displaytoclient.png)
+
+
