@@ -67,9 +67,9 @@ client.on(Events.InteractionCreate, async (interaction) => {
 });
 
 //Logging when bot is running
-// client.on('ready', (c) => {
-//   console.log(`The bot, ${c.user.tag}, is ready 👌`)
-// });
+client.on('ready', (c) => {
+  console.log(`The bot, ${c.user.tag}, is ready 👌`)
+});
 
 //logs in server using token
 client.login(token);
