@@ -24,4 +24,4 @@ Run server:
 
 ## Usage
 
-Project is not currently deployed.
+Project is deployed here: <https://dxa-takehome.onrender.com>
